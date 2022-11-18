@@ -1,0 +1,297 @@
+<!-- <form #gfg = "ngForm">
+    <div>
+        <label>Age</label>
+        <input type="number" name="Age" [(ngModel)]="Age">
+        
+    </div>
+
+    <div >
+        <select  #duration (change)="onSelect_Sex(duration.value)">
+            <option [ngValue]="null">Sex</option>
+            <option value="1">Female</option>
+            <option value="0">Male</option>
+          </select>
+    </div>
+
+    <div >
+        <select  #duration (change)="onSelect_CP(duration.value)">
+            <option [ngValue]="null">Chest Pain Type</option>
+            <option value="0">Typical Angina</option>
+            <option value="1">Atypical Angina</option>
+            <option value="2">Non-Anginal Pain</option>
+            <option value="3">Asymptotic Pain</option>
+        </select>
+    </div>
+
+    <div>
+        <label>Blood Pressure</label>
+        <input type="number"  name="BP" [(ngModel)]="BP">
+    </div>
+
+    <div>
+        <label>Cholestrol</label>
+        <input type="number"  name="Cholesterol"[(ngModel)]="Cholesterol">
+    </div>
+
+    <div>
+        <label>Fasting Blood Sugar</label>
+        <input type="number"  name="FBS_over_120" [(ngModel)]="FBS_over_120">
+    </div>
+
+    <div >
+        <select  #duration (change)="onSelect_EKG(duration.value)">
+            <option [ngValue]="null">EKG Result</option>
+            <option value="0">Normal</option>
+            <option value="1">Aving ST-T wave abnormality</option>
+            <option value="2">Probable or definite left ventricular hypertrophy</option>
+        </select>
+    </div>
+
+    <div>
+        <label>Maximum Heart Rate</label>
+        <input type="number" name="Max_HR" [(ngModel)]="Max_HR">
+    </div>
+
+    <div >
+        <select  #duration (change)="onSelect_EA(duration.value)">
+            <option [ngValue]="null">Exercise Angia</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+    </div>
+
+    <div>
+        <label>ST Depression</label>
+        <input type="number" name="ST_depression" [(ngModel)]="ST_depression">
+    </div>
+
+    <div>
+        <label>Slope of ST</label>
+        <input type="number"  name="Slope_of_ST"  [(ngModel)]="Slope_of_ST">
+    </div>
+
+    <div >
+        <select  #duration (change)="onSelect_NVF(duration.value)">
+            <option [ngValue]="null">Number Of vessels Fluro</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+    </div>
+
+    <div>
+        <label>Thallium</label>
+        <input type="number" name="Thallium" [(ngModel)]="Thallium">
+    </div>
+
+
+
+
+
+
+    
+    
+    
+
+
+
+    <div>
+        <button (click)="Predict()">Predict</button>
+    </div>
+
+    <br>
+    <br>
+
+    
+    
+        
+        
+</form>
+
+{{message}}
+ -->
+ <div class="navi">
+    <nav>
+      &nbsp;&nbsp;&nbsp;&nbsp;Heart Disease Prediction
+    </nav>
+  </div>
+ <body>
+    
+
+  <div  [hidden]="Input" class="container1" >
+    <div class="title">Provide Values </div>
+    <div class="content1">
+      <form action="#">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Age</span>
+            <input type="text" placeholder="Enter yourAge" name="Age" [(ngModel)]="Age">
+          </div>
+          <div class="input-box">
+            <span class="details">Gender</span>
+            <select  #duration (change)="onSelect_Sex(duration.value)">
+                <option [ngValue]="null">Select Value</option>
+                <option value="1">Female</option>
+                <option value="0">Male</option>
+              </select>
+
+              
+            
+          </div>
+          <div class="input-box">
+            <span class="details">Chest Pain Type</span>
+              <select  #duration (change)="onSelect_CP(duration.value)">
+                <option [ngValue]="null">Select Value</option>
+                <option value="0">Typical Angina</option>
+                <option value="1">Atypical Angina</option>
+                <option value="2">Non-Anginal Pain</option>
+                <option value="3">Asymptotic Pain</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <span class="details">Blood Pressure</span>
+            <input type="text"  placeholder="Enter Your BP" name="BP" [(ngModel)]="BP">
+          </div>
+          <div class="input-box">
+            <span class="details">Cholesterol</span>
+            <input type="text"  placeholder="Enter Value" name="Cholesterol"[(ngModel)]="Cholesterol">
+          </div>
+          <div class="input-box">
+            <span class="details">Fasting Blood Sugar</span>
+            <input type="text"  placeholder="Enter Value" name="FBS_over_120" [(ngModel)]="FBS_over_120">
+          </div>
+          <div class="input-box">
+            <span class="details">EKG REsult</span>
+            <select  #duration (change)="onSelect_EKG(duration.value)">
+                <option [ngValue]="null">Select Value</option>
+                <option value="0">Normal</option>
+                <option value="1">Aving ST-T wave abnormality</option>
+                <option value="2">Probable or definite left ventricular hypertrophy</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <span class="details">Maximum Heart Rate</span>
+            <input type="text" placeholder="Enter Value" name="Max_HR" [(ngModel)]="Max_HR">
+          </div>
+          <div class="input-box">
+            <span class="details">Exercise Angia</span>
+            <select  #duration (change)="onSelect_EA(duration.value)">
+                <option [ngValue]="null">Select Value</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <span class="details">ST Depression</span>
+            <input type="text" name="ST_depression" [(ngModel)]="ST_depression">
+          </div>
+          <div class="input-box">
+            <span class="details">Slope Of ST</span>
+            <input type="text"  name="Slope_of_ST"  [(ngModel)]="Slope_of_ST">
+          </div>
+          <div class="input-box">
+            <span class="details">Number of Vessels Fluro</span>
+          <select  #duration (change)="onSelect_NVF(duration.value)">
+            <option [ngValue]="null">Select Value</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        </div>
+        <div class="input-box">
+            <span class="details">Thallium</span>
+            <input type="text" name="Thallium" [(ngModel)]="Thallium">
+        </div>
+
+
+       
+
+        </div>
+         <div class="button">
+            <input type="submit" value="Predict" (click)="Predict()">
+          </div>
+        
+      </form>
+    </div>
+  </div>
+
+
+<div [hidden]="Presence" class="blog-card">
+<div class="inner-part">
+    <label for="imgTap" class="img">
+    <img class="img-1" src="assets/heart.jpg">
+    </label>
+    <div class="content content-2">
+     
+       
+     
+
+        <div class="title">
+                  As per your report you have Chance of Facing Heart Attack.
+               </div>
+               <div class="text">
+                But it's not the end you can prevent it by following precautionary activities.
+                </div>
+                <div class="text">
+                    Don't smoke or use tobacco. One of the best things you can do for your heart is to stop smoking or using smokeless tobacco. ...
+
+                </div>
+                <div class="text">
+                    Get moving: Aim for at least 30 to 60 minutes of activity daily.
+
+                </div>
+                <div class="text">
+                    Eat a heart-healthy diet. 
+                    Maintain a healthy weight.
+                    Manage stress.
+                    Get regular health screenings.
+                </div>
+            
+
+
+    </div>
+    
+    </div>
+</div>
+
+
+
+    <div [hidden]="Absence" class="blog-card">
+    <div class="inner-part">
+        <label for="imgTap" class="img">
+        <img class="img-1" src="assets/heart2.jpg">
+        </label>
+        <div class="content content-2">
+         
+           
+         
+    
+            <div class="title">
+                      As per your report you are healthy and have less or no chance for facing Heart Disease.
+                   </div>
+                   <div class="text">
+                    Anyhow, follow the below steps for more healthy life
+                    </div>
+                    <div class="text">
+                        Don't smoke or use tobacco. One of the best things you can do for your heart is to stop smoking or using smokeless tobacco. ...
+                        Get moving: Aim for at least 30 to 60 minutes of activity daily.
+                    </div>
+                    <div class="text">
+                        Eat a heart-healthy diet. 
+                        Maintain a healthy weight.
+                        Manage stress.
+                        Get regular health screenings.
+                    </div>
+                
+    
+    
+        </div>
+        
+        </div>
+    </div>
+    
+</body>
+
+

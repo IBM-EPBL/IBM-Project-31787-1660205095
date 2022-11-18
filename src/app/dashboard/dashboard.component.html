@@ -1,0 +1,105 @@
+
+<div class="navi">
+    <nav>
+      &nbsp;&nbsp;&nbsp;&nbsp;Heart Disease Prediction
+    </nav>
+  </div>
+   <body>
+      <div class="blog-card">
+      
+        <div [hidden]="card1">
+         <div  class="inner-part">
+            <label for="imgTap" class="img">
+            <img class="img-1" src="assets/AgeVSSex.png">
+            </label>
+            <div class="content content-2">
+              
+              
+               <div class="text">
+                  Chest Pain plays a vital part for getting heart disease. There are 4 types of chest pain generally, typical angina , atypical angina, non-anginal pain, asymptomatic.
+                  People around 50-60 age suffers around chest pain. Male suffers with typical angia chest pain atmost whereas Female also suffers from the same.But patients who suffers asymptotic chest pain meets heart disease mostly.              
+                  
+              
+                 
+               </div>
+               <button (click)="click_card1()">Next</button>
+            </div>
+         </div>
+        </div>
+
+        <div [hidden]="card2">
+         <div class="inner-part">
+            <label for="imgTap" class="img">
+            <img class="img-1" src="assets/Cholestrol.png">
+            </label>
+            <div class="content content-2">
+             
+               
+               <div class="text">
+                With high cholesterol, you can develop fatty deposits in your blood vessels. Eventually, these deposits grow, making it difficult for enough blood to flow through your arteries. Sometimes, those deposits can break suddenly and form a clot that causes a heart attack or stroke.
+                Research and Analysis says that people around 55-60 age limit have more cholestrol.As cholestrol level increases chances of getting heart disease.
+                </div>
+               
+               <button (click)="click_card2_prev()">Prev</button>
+               <button (click)="click_card2_next()">Next</button>
+            </div>
+         </div>
+        </div>
+
+        <div [hidden]="card3">
+            <div class="inner-part">
+               <label for="imgTap" class="img">
+               <img class="img-1" src="assets/Max HR.png">
+               </label>
+               <div class="content content-2">
+                  
+                 
+                  <div class="text">
+                    Increased resting heart rate interferes at all stages of the cardiovasculardisease continuum. Heart rate may add to the pathogenesis of arterial hypertension or diabetes, increase the cardiovascular risk in patients with these diseases, and define mortality and morbidity in patients with CAD and heart failure.
+                    Exercise can also reduce the risk of your angina getting worse, and of a heart attack or stroke, as well as helping to manage your weight and reduce your risk of back pain
+
+                  </div>
+                  
+                  <button (click)="click_card3_prev()">Prev</button>
+               <button (click)="click_card3_next()">Next</button>
+               </div>
+            </div>
+           </div>
+
+           <div [hidden]="card4">
+            <div class="inner-part">
+               <label for="imgTap" class="img">
+               <img class="img-1" src="assets/BP.png">
+               </label>
+               <div class="content content-2">
+                
+                  <div class="text">
+                    Blood pressure is not an accurate predictor of a heart attack. Sometimes a heart attack can cause an increase or decrease in blood pressure, but having a change in blood pressure reading doesn't always mean it's heart-related. Instead, a better strategy for gauging a heart attack is to look at your overall symptoms.According to research and analysis Male have more blood pressure than Female.Similar to previous cases people around 50-60 age limit have high BP comparatively.                  </div>
+                  
+                  <button (click)="click_card4_prev()">Prev</button>
+               <button (click)="click_card4_next()">Next</button>
+               </div>
+            </div>
+           </div>
+           
+           <div [hidden]="card5">
+            <div class="inner-part">
+               <label for="imgTap" class="img">
+               <img class="img-1" src="assets/Max HR 2.png">
+               </label>
+               <div class="content content-2">
+                  
+                
+                  <div class="text">
+                    The plots shows Maxium Heart Rate In Existing Heart Disease By Exercise Angina, Here  for absence of exercise angina People who have heart rate around 159 have absence of heart disease and who gave heart rate around 140 have presence of heart disease.
+                    And for presence of exercise angina People who have heart rate around 150 have absence of heart disease and who gave heart rate around 136 have absence of heart disease.
+                  </div>
+                  <button (click)="click_card5()">Prev</button>
+               
+                  
+                  
+               </div>
+            </div>
+           </div>
+      </div>
+   </body>
